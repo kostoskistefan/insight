@@ -1,5 +1,9 @@
 #pragma once
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #ifdef insight_info
 #warning "insight_info is already defined"
 #else
@@ -25,3 +29,7 @@ void insight_set_project_name(const char *name);
 void _insight_info(const char *message, const char *file_name, unsigned int line_number);
 void _insight_warning(const char *message, const char *file_name, unsigned int line_number);
 void _insight_error(const char *message, const char *file_name, unsigned int line_number);
+
+#ifdef __cplusplus
+}
+#endif
